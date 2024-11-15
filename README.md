@@ -37,4 +37,4 @@
 
 ## Screenshots
 
-![App Screenshot](URL_Screenshot)
+![App Screenshot](img/cuaca.png)
