@@ -265,7 +265,21 @@ public class CekCuacaSederhanaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+    int selectedRow = jTable1.getSelectedRow(); // Get selected row index
+    if (selectedRow != -1) { // Check if a row is selected
+        // Remove city from favorite list and combo box if it exists
+        String city = (String) jTable1.getValueAt(selectedRow, 1); // Get city name from the table
+        favoriteCities.remove(city);
+        jComboBox1.removeItem(city);
+
+        // Remove row from the table model
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.removeRow(selectedRow);
+
+        JOptionPane.showMessageDialog(this, "Data berhasil dihapus.");
+    } else {
+        JOptionPane.showMessageDialog(this, "Pilih baris data yang ingin dihapus.");
+    }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
