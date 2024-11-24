@@ -37,4 +37,4 @@
 
 ## Screenshots
 
-![App Screenshot](img/cuaca.png)
+![App Screenshot](img/AplikasiCekCuaca.gif)
